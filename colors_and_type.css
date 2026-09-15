@@ -1,0 +1,199 @@
+/* ─────────────────────────────────────────────────────────────
+   MIMO DESIGN SYSTEM — colors & type tokens
+   Brand color: #0073FF (Mimo blue).
+   ───────────────────────────────────────────────────────────── */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600&display=swap");
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype-variations"),
+       url("fonts/Inter-VariableFont_slnt_wght.ttf") format("truetype");
+}
+
+:root {
+  /* ===== Brand — Mimo Blue ===== */
+  --mimo-50:   #EBF3FF;
+  --mimo-100: #D6E6FF;
+  --mimo-200: #ADCDFF;
+  --mimo-300: #7DB1FF;
+  --mimo-400: #4F95FF;
+  --mimo-500: #0073FF;
+  --mimo-600: #005CD9;
+  --mimo-700: #0049AD;
+  --mimo-800: #00387F;
+  --mimo-900: #00264F;
+  --mimo-950: #001A38;
+
+  --brand-primary:   var(--mimo-500);
+  --brand-primary-hover: var(--mimo-600);
+  --brand-primary-pressed: var(--mimo-700);
+
+  /* ===== Gray ===== */
+  --gray-25:  #FDFDFD;
+  --gray-50:  #FAFAFA;
+  --gray-100: #F5F5F5;
+  --gray-200: #E9EAEB;
+  --gray-300: #D5D7DA;
+  --gray-400: #A4A7AE;
+  --gray-500: #717680;
+  --gray-600: #535862;
+  --gray-700: #414651;
+  --gray-800: #252B37;
+  --gray-900: #181D27;
+  --gray-950: #0A0D12;
+
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* ===== Semantic — Success ===== */
+  --success-50:  #ECFDF3;
+  --success-100: #DCFAE6;
+  --success-200: #ABEFC6;
+  --success-500: #17B26A;
+  --success-600: #079455;
+  --success-700: #067647;
+
+  /* ===== Semantic — Warning ===== */
+  --warning-50:  #FFFAEB;
+  --warning-100: #FEF0C7;
+  --warning-200: #FEDF89;
+  --warning-500: #F79009;
+  --warning-600: #DC6803;
+  --warning-700: #B54708;
+
+  /* ===== Semantic — Error ===== */
+  --error-25:   #FFFBFA;
+  --error-50:   #FEF3F2;
+  --error-100:  #FEE4E2;
+  --error-200:  #FECDCA;
+  --error-500:  #F04438;
+  --error-600:  #D92D20;
+  --error-700:  #B42318;
+
+  /* ===== Foreground ===== */
+  --fg-primary:    var(--gray-900);
+  --fg-secondary:  var(--gray-700);
+  --fg-tertiary:   var(--gray-600);
+  --fg-quaternary: var(--gray-500);
+  --fg-disabled:   var(--gray-400);
+  --fg-on-brand:   var(--white);
+  --fg-brand:      var(--mimo-700);
+  --fg-error:      var(--error-600);
+  --fg-success:    var(--success-700);
+  --fg-warning:    var(--warning-700);
+
+  /* ===== Background ===== */
+  --bg-primary:    var(--white);
+  --bg-secondary:  var(--gray-50);
+  --bg-tertiary:   var(--gray-100);
+  --bg-quaternary: var(--gray-200);
+  --bg-brand-primary:   var(--mimo-500);
+  --bg-brand-secondary: var(--mimo-50);
+  --bg-error:      var(--error-50);
+  --bg-success:    var(--success-50);
+  --bg-warning:    var(--warning-50);
+  --bg-overlay:    rgba(10, 13, 18, 0.7);
+
+  /* ===== Border ===== */
+  --border-primary:   var(--gray-300);
+  --border-secondary: var(--gray-200);
+  --border-tertiary:  var(--gray-100);
+  --border-brand:     var(--mimo-500);
+  --border-error:     var(--error-500);
+  --border-disabled:  var(--gray-200);
+
+  /* ===== Radius ===== */
+  --radius-none: 0;
+  --radius-xxs: 2px;
+  --radius-xs:  4px;
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  10px;
+  --radius-xl:  12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 20px;
+  --radius-4xl: 24px;
+  --radius-full: 9999px;
+
+  /* ===== Spacing ===== */
+  --space-0: 0;
+  --space-0_5: 2px;
+  --space-1: 4px;
+  --space-1_5: 6px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ===== Shadows ===== */
+  --shadow-xs: 0 1px 2px 0 rgba(10, 13, 18, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(10, 13, 18, 0.10), 0 1px 2px -1px rgba(10, 13, 18, 0.10);
+  --shadow-md: 0 4px 6px -1px rgba(10, 13, 18, 0.10), 0 2px 4px -2px rgba(10, 13, 18, 0.06);
+  --shadow-lg: 0 12px 16px -4px rgba(10, 13, 18, 0.08), 0 4px 6px -2px rgba(10, 13, 18, 0.03);
+  --shadow-xl: 0 20px 24px -4px rgba(10, 13, 18, 0.08), 0 8px 8px -4px rgba(10, 13, 18, 0.03);
+  --shadow-2xl: 0 24px 48px -12px rgba(10, 13, 18, 0.18);
+  --shadow-3xl: 0 32px 64px -12px rgba(10, 13, 18, 0.14);
+  --shadow-focus-brand: 0 0 0 4px rgba(0, 115, 255, 0.24);
+  --shadow-focus-error: 0 0 0 4px rgba(217, 45, 32, 0.24);
+
+  /* ===== Type ===== */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --text-display-2xl: 4.5rem;
+  --text-display-xl:  3.75rem;
+  --text-display-lg:  3rem;
+  --text-display-md:  2.25rem;
+  --text-display-sm:  1.875rem;
+  --text-display-xs:  1.5rem;
+
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-md: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --tracking-display: -0.02em;
+}
+
+html { font-family: var(--font-sans); color: var(--fg-primary); }
+
+.h-display-2xl { font: var(--weight-semibold) var(--text-display-2xl)/5.625rem var(--font-sans); letter-spacing: var(--tracking-display); }
+.h-display-xl  { font: var(--weight-semibold) var(--text-display-xl)/4.5rem var(--font-sans);   letter-spacing: var(--tracking-display); }
+.h-display-lg  { font: var(--weight-semibold) var(--text-display-lg)/3.75rem var(--font-sans);  letter-spacing: var(--tracking-display); }
+.h-display-md  { font: var(--weight-semibold) var(--text-display-md)/2.75rem var(--font-sans);  letter-spacing: var(--tracking-display); }
+.h-display-sm  { font: var(--weight-semibold) var(--text-display-sm)/2.375rem var(--font-sans); }
+.h-display-xs  { font: var(--weight-semibold) var(--text-display-xs)/2rem var(--font-sans); }
+
+.t-xl { font: var(--weight-regular) var(--text-xl)/1.875rem var(--font-sans); }
+.t-lg { font: var(--weight-regular) var(--text-lg)/1.75rem var(--font-sans); }
+.t-md { font: var(--weight-regular) var(--text-md)/1.5rem var(--font-sans); }
+.t-sm { font: var(--weight-regular) var(--text-sm)/1.25rem var(--font-sans); }
+.t-xs { font: var(--weight-regular) var(--text-xs)/1.125rem var(--font-sans); }
+
+.t-strong { font-weight: var(--weight-semibold); color: var(--fg-primary); }
+.t-muted  { color: var(--fg-tertiary); }
+.t-mono   { font-family: var(--font-mono); }
+
+h1, .h1 { font: var(--weight-semibold) var(--text-display-sm)/2.375rem var(--font-sans); color: var(--fg-primary); margin: 0; }
+h2, .h2 { font: var(--weight-semibold) var(--text-display-xs)/2rem var(--font-sans); color: var(--fg-primary); margin: 0; }
+h3, .h3 { font: var(--weight-semibold) var(--text-lg)/1.75rem var(--font-sans); color: var(--fg-primary); margin: 0; }
+p, .p   { font: var(--weight-regular) var(--text-md)/1.5rem var(--font-sans); color: var(--fg-secondary); margin: 0; }
+small, .small { font: var(--weight-regular) var(--text-sm)/1.25rem var(--font-sans); color: var(--fg-tertiary); }
+code, .code { font-family: var(--font-mono); font-size: 0.875em; background: var(--gray-100); padding: 2px 6px; border-radius: var(--radius-xs); }
