@@ -1,7 +1,12 @@
+import SidebarNavigation from './components/SidebarNavigation'
+
 function App() {
   return (
-    <div>
-      {/* Header Navigation component (Untitled UI) goes here */}
+    <div className="flex h-screen">
+      <div className="w-[216px]">
+        <SidebarNavigation />
+      </div>
+      <div className="flex-1 bg-[#fafafa]" />
     </div>
   )
 }
