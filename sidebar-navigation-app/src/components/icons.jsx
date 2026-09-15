@@ -53,6 +53,22 @@ export function ArrowLeftIcon({ className }) {
   )
 }
 
+export function CheckIcon({ className }) {
+  return (
+    <svg {...iconProps(className)}>
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  )
+}
+
+export function XIcon({ className }) {
+  return (
+    <svg {...iconProps(className)}>
+      <path d="M18 6 6 18M6 6l12 12" />
+    </svg>
+  )
+}
+
 export function ArrowRightIcon({ className }) {
   return (
     <svg {...iconProps(className)}>

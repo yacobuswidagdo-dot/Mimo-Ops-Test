@@ -1,35 +1,25 @@
-import { useMemo, useState } from 'react'
-import SidebarNavigation from './components/SidebarNavigation'
-import PageHeader from './components/PageHeader'
-import AttentionTabs from './components/AttentionTabs'
-import SearchAndFilters from './components/SearchAndFilters'
-import TransactionTable from './components/TransactionTable'
-import { ATTENTION_TABS, TRANSACTIONS } from './data/transactions'
+import { Navigate, Route, BrowserRouter, Routes } from 'react-router-dom'
+import { AppProvider } from './context/AppContext'
+import Layout from './Layout'
+import RequestListPage from './pages/RequestListPage'
+import IntakeFormPage from './pages/IntakeFormPage'
+import RequestDetailPage from './pages/RequestDetailPage'
 
 function App() {
-  const [activeTab, setActiveTab] = useState('mine')
-  const [query, setQuery] = useState('')
-
-  const rows = useMemo(() => {
-    const q = query.trim().toLowerCase()
-    if (!q) return TRANSACTIONS
-    return TRANSACTIONS.filter((row) =>
-      [row.id, row.partner, row.nominal].some((field) => field.toLowerCase().includes(q)),
-    )
-  }, [query])
-
   return (
-    <div className="flex h-screen bg-[#fafafa]">
-      <div className="w-[216px] shrink-0">
-        <SidebarNavigation />
-      </div>
-      <div className="flex flex-1 flex-col gap-5 overflow-y-auto px-6 py-7">
-        <PageHeader title="Transactions" subtitle="312 transaksi · diperbarui 2 menit lalu" />
-        <AttentionTabs tabs={ATTENTION_TABS} active={activeTab} onChange={setActiveTab} />
-        <SearchAndFilters query={query} onQueryChange={setQuery} />
-        <TransactionTable rows={rows} />
-      </div>
-    </div>
+    <AppProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Navigate to="/requests" replace />} />
+            <Route path="requests" element={<RequestListPage />} />
+            <Route path="requests/new" element={<IntakeFormPage />} />
+            <Route path="requests/:id" element={<RequestDetailPage />} />
+            <Route path="*" element={<Navigate to="/requests" replace />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AppProvider>
   )
 }
 
